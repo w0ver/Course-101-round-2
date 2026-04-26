@@ -8,7 +8,7 @@ this is a privet repo for the course student only do not share with anyone.
 
 
 
-* to get all the new files, click on update.bat file to pull all the new files from the repo
+* to get all the new files, click on update.bat file to pull all the new files from the repo.
 
 
 
