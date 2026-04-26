@@ -2,4 +2,5 @@
 Prop3=19,11
 [InternetShortcut]
 IDList=
-URL=https://huggingface.co/silveroxides/Qwen3-4B-ComfyQuants-SingleFiles/resolve/main/Huihui-Qwen3-4B-abliterated-v2_fp8mixed.safetensors?download=true
+URL=https://huggingface.co/Comfy-Org/z_image_turbo/blob/main/split_files/text_encoders/qwen_3_4b.safetensors
+HotKey=0
