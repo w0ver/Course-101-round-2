@@ -1,0 +1,565 @@
+{
+  "id": "0c358f16-3754-4bd2-be92-3d9f3f96d48c",
+  "revision": 0,
+  "last_node_id": 52,
+  "last_link_id": 56,
+  "nodes": [
+    {
+      "id": 42,
+      "type": "FishS2TTS",
+      "pos": [
+        -2507.6237524341855,
+        380.69885354812294
+      ],
+      "size": [
+        357,
+        490
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            42
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "cnr_id": "ComfyUI-fish-audio-s2",
+        "ver": "4dfc9e08ceaa7956f27f2857bff511b9ed75dc95",
+        "Node name for S&R": "FishS2TTS",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "s2-pro-fp8",
+        "[Happy] إِيه يَا عَمَّ الْغِيبَة دِي كُلَّهَا؟ عَاش مَنْ شَافَك وَاللَّه! [Surprised] بِتْهَزَّر؟ إِنْتَ رِجِعْت مِنِ السَّفَر إِمْتَى؟ مَحَدِّش قَالِّي خَالِص! [Angry] طَب مِش كُنْت تِتِّصِل بِيَّا تَقُولِّي؟ وَلَا أَنَا مَابْقِتْش عَلَى الْبَال؟ [Laughing] خَلَاص يَا سِيدِي مَاتِزْعَلْش، حَقَّك عَلَيَّا، أَنَا بَس بَانْكُشَك! [Whispering] بَاقُولَّك إِيه، تَعَالَى نِنْزِل نِشْرَب قَهْوَة وَنِرْغِي بَرَاحِتْنَا.\n",
+        "auto",
+        "auto",
+        "auto",
+        "auto",
+        0,
+        200,
+        0.7,
+        0.7,
+        1.2,
+        42,
+        "fixed",
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "id": 2,
+      "type": "PreviewAudio",
+      "pos": [
+        -2132.72146128271,
+        382.0105292146327
+      ],
+      "size": [
+        389.3472371792841,
+        126.87310597423561
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 42
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "cnr_id": "comfy-core",
+        "ver": "0.16.4",
+        "Node name for S&R": "PreviewAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 49,
+      "type": "WhisperSTT",
+      "pos": [
+        -3305.2642295706387,
+        948.3590873949196
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 53
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            55
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "cnr_id": "comfyui-edgetts",
+        "ver": "1.2.2",
+        "Node name for S&R": "WhisperSTT",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "large",
+        "ar"
+      ]
+    },
+    {
+      "id": 51,
+      "type": "AudioCrop",
+      "pos": [
+        -3596.2955880844015,
+        948.0948643227249
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 52
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            53,
+            54
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "cnr_id": "audio-separation-nodes-comfyui",
+        "ver": "1.5.0",
+        "Node name for S&R": "AudioCrop",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "0:00",
+        "0:15"
+      ]
+    },
+    {
+      "id": 45,
+      "type": "LoadAudio",
+      "pos": [
+        -3896.448810522026,
+        944.3409305432689
+      ],
+      "size": [
+        282.798828125,
+        136
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            52
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "LoadAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "ha.m4a",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 52,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -3015.2399429781944,
+        947.6802956457226
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 55
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            56
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "609f3afaa74b2f88ef9ce8d939626065e3247469",
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "من يعرف كيف يكون محبوبا بين الناس يسعى ويحاول النشر السعادة"
+      ]
+    },
+    {
+      "id": 44,
+      "type": "FishS2VoiceCloneTTS",
+      "pos": [
+        -2560.90742673677,
+        943.1088767218109
+      ],
+      "size": [
+        391.3357011133121,
+        946.1974591899457
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "reference_audio",
+          "type": "AUDIO",
+          "link": 49
+        },
+        {
+          "name": "reference_text",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "reference_text"
+          },
+          "link": 56
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            47
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "cnr_id": "ComfyUI-fish-audio-s2",
+        "ver": "9024ae77e2936d256bc33af9139d7de9ad9102eb",
+        "Node name for S&R": "FishS2VoiceCloneTTS",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "s2-pro-fp8",
+        "الحمدُ للهِ الذي جعلَ الإحسانَ للوالدينِ قرينَ توحيدِهِ، وأفاضَ من سَعةِ رحمتِهِ على من تذلَّلَ لوالدَيْهِ طاعةً لتمجيدِهِ، نحمدُهُ سبحانَهُ، أوجبَ البرَّ ميثاقًا غليظًا، وجعلَ الرضا مفتاحًا للفلاحِ وجزاءً عريضًا، وأشهدُ أنْ لا إلهَ إلا اللهُ وحدَهُ لا شريكَ لهُ، وأشهدُ أنَّ سيدَنا ونبيَّنا محمدًا عبدُ اللهِ ورسولُهُ، إمامُ البارِّينَ وسيدُ الواصلينَ، الذي أدَّبَهُ ربُّهُ فأحسنَ تأديبَهُ، فكانَ للرحمةِ منبعًا وللوفاءِ مطلعًا، صلَّى اللهُ عليهِ وعلى آلِهِ وصحبِهِ صلاةً وسلامًا دائمينِ إلى يومِ الدينِ، أمَّا بعدُ، فيا عبدَ اللهِ",
+        "ar",
+        "cuda",
+        "auto",
+        "auto",
+        4096,
+        200,
+        1,
+        0.8,
+        1.1,
+        57037011,
+        "randomize",
+        true,
+        false,
+        false,
+        "من يعرف كيف يكون\nمحبوباً بين الناس\nيسعى ويحاول نشر السعادة\nمن يحلم بالوصول\nلقلوب جميع الناس\nهو من يعطي الطفل الإفادة\nتخيّل أنّ الكون\nلا طعم له ولا لون\nأو أن التلفزيون\nمن غير سبيستون\nهذا محال\n\nصديقي تعال\nلنشاهد أفلاماً وبرامج للأطفال\nتعال\nصديقي تعاال\nلحظات لاتنسى مع كلِّ الأبطال\nلا تنسى أن تبقى\nمع سبيستووون\nلا تنسى أن تبقى\nمع سبيستووون"
+      ]
+    },
+    {
+      "id": 48,
+      "type": "easy cleanGpuUsed",
+      "pos": [
+        -2770.2558930859263,
+        940.2406876954477
+      ],
+      "size": [
+        161.3404296875,
+        26
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 54
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            49
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "cnr_id": "comfyui-easy-use",
+        "ver": "337a03bb19273ee084e56b16a59ad35cb07a1a04",
+        "Node name for S&R": "easy cleanGpuUsed",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 47,
+      "type": "PreviewAudio",
+      "pos": [
+        -2144.4536926876694,
+        942.0551573138068
+      ],
+      "size": [
+        351.7814971342052,
+        88
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 47
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "cnr_id": "comfy-core",
+        "ver": "0.16.4",
+        "Node name for S&R": "PreviewAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      42,
+      42,
+      0,
+      2,
+      0,
+      "AUDIO"
+    ],
+    [
+      47,
+      44,
+      0,
+      47,
+      0,
+      "AUDIO"
+    ],
+    [
+      49,
+      48,
+      0,
+      44,
+      0,
+      "AUDIO"
+    ],
+    [
+      52,
+      45,
+      0,
+      51,
+      0,
+      "AUDIO"
+    ],
+    [
+      53,
+      51,
+      0,
+      49,
+      0,
+      "AUDIO"
+    ],
+    [
+      54,
+      51,
+      0,
+      48,
+      0,
+      "AUDIO"
+    ],
+    [
+      55,
+      49,
+      0,
+      52,
+      0,
+      "STRING"
+    ],
+    [
+      56,
+      52,
+      0,
+      44,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.6830134553650705,
+      "offset": [
+        4588.965207556137,
+        -137.77438626417373
+      ]
+    },
+    "frontendVersion": "1.42.15",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ue_links": [],
+    "links_added_by_ue": []
+  },
+  "version": 0.4
+}

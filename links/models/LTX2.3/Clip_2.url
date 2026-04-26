@@ -1,0 +1,5 @@
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+IDList=
+URL=https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/a8c73b7b1fb95cd3218b97d8cbcfcc9239ad3a39/text_encoders/ltx-2.3-22b-distilled_embeddings_connectors.safetensors
