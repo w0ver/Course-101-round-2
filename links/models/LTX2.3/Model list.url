@@ -2,4 +2,5 @@
 Prop3=19,11
 [InternetShortcut]
 IDList=
-URL=https://huggingface.co/unsloth/LTX-2.3-GGUF/tree/main
+URL=https://huggingface.co/QuantStack/LTX-2.3-GGUF/tree/main/LTX-2.3-distilled-1.1
+HotKey=0
